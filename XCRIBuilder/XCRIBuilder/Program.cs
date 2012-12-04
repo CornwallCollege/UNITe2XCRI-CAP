@@ -23,16 +23,18 @@ namespace XCRIBuilder
             gen.RootElement = catalog;
             
             gen.Generate(xmloutput);
-            //String output = xmloutput.ToString();
             xmloutput = xmloutput.Replace("&lt;", "<");
             xmloutput = xmloutput.Replace("&gt;", ">");
             xmloutput = xmloutput.Replace("li value=" + "\"0\"", "li");
-            //output = WebUtility.HtmlDecode(output);
+            xmloutput = xmloutput.Replace("encoding=\"utf-16\"", "encoding=\"utf-8\"");
 
-            File.WriteAllText(@"c:\temp\xmloutput.xml",xmloutput.ToString());
-            //Console.Write(xmloutput);
+            string outputfile = @"c:\temp\xmloutput.xml";
+            if (args.Length > 0)
+            {
+                outputfile = args[0];
+            }
 
-           
+            File.WriteAllText(outputfile,xmloutput.ToString());         
 
         }
     }

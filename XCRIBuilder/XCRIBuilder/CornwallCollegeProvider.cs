@@ -545,7 +545,7 @@ namespace XCRIBuilder
             }
             if (output != _string)
             {
-                output = "<div xmlns=" + quote + "http://www.w3.org/1999/xhtml" + quote + ">" + output + "</div>";
+                output = "<![CDATA[<div xmlns=" + quote + "http://www.w3.org/1999/xhtml" + quote + ">" + output + "</div>]]>";
             }
 
           
@@ -558,7 +558,7 @@ namespace XCRIBuilder
 
         private void PopulateDataViews()
         {
-            OracleConnection cnn = new OracleConnection("Server=STUDREC;User ID=infosys;Password=trees;");
+            OracleConnection cnn = new OracleConnection("Server=STUDREC;User ID=XCRI;Password=XCRI;");
             
             cnn.Open();
 
