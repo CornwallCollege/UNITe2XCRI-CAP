@@ -762,6 +762,8 @@ namespace XCRI.XmlGeneration.XCRICAP12
                 this.Write(xmlWriter, element.AwardedBy[0]);
             if ((element.AccreditedBy != null) && (element.AccreditedBy.Count > 0))
                 this.Write(xmlWriter, element.AccreditedBy[0]);
+            if (element.Url != null)
+                this.Write(xmlWriter, element.Url);
             this._WriteEndElement(xmlWriter);
         }
 

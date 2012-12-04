@@ -18,6 +18,7 @@ namespace XCRI.Interfaces.XCRICAP12
         Interfaces.IQualificationType Type { get; set; }
         IList<Interfaces.IQualificationAwardedBy> AwardedBy { get; }
         IList<Interfaces.IQualificationAccreditedBy> AccreditedBy { get; }
+        Uri Url { get; set; }
 
     }
 }
