@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B9EABC78-2AEC-46AE-B0E5-ED4FBE45DFEF}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
@@ -8,9 +8,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B9EABC
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XCRI", "C:\XCRISource\XCRI\XCRI.csproj", "{1BA7A833-56BC-4900-8712-B12D530ECD99}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XCRIBuilder", "XCRIBuilder\XCRIBuilder.csproj", "{F8F9EF33-2EE1-4959-9359-875A210BD0D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XCRI", "..\3rd Party\XCRISource\XCRI\XCRI.csproj", "{1BA7A833-56BC-4900-8712-B12D530ECD99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XCRI.Tests", "..\3rd Party\XCRISource\XCRI.Tests\XCRI.Tests.csproj", "{F9729D33-1B1C-412B-A96C-877E718C664F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,16 +24,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Release|x86.ActiveCfg = Release|Any CPU
 		{F8F9EF33-2EE1-4959-9359-875A210BD0D4}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{F8F9EF33-2EE1-4959-9359-875A210BD0D4}.Debug|Any CPU.Build.0 = Debug|x86
 		{F8F9EF33-2EE1-4959-9359-875A210BD0D4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
@@ -43,11 +35,28 @@ Global
 		{F8F9EF33-2EE1-4959-9359-875A210BD0D4}.Release|Mixed Platforms.Build.0 = Release|x86
 		{F8F9EF33-2EE1-4959-9359-875A210BD0D4}.Release|x86.ActiveCfg = Release|x86
 		{F8F9EF33-2EE1-4959-9359-875A210BD0D4}.Release|x86.Build.0 = Release|x86
+		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1BA7A833-56BC-4900-8712-B12D530ECD99}.Release|x86.ActiveCfg = Release|Any CPU
+		{F9729D33-1B1C-412B-A96C-877E718C664F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9729D33-1B1C-412B-A96C-877E718C664F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9729D33-1B1C-412B-A96C-877E718C664F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F9729D33-1B1C-412B-A96C-877E718C664F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F9729D33-1B1C-412B-A96C-877E718C664F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F9729D33-1B1C-412B-A96C-877E718C664F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9729D33-1B1C-412B-A96C-877E718C664F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9729D33-1B1C-412B-A96C-877E718C664F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F9729D33-1B1C-412B-A96C-877E718C664F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F9729D33-1B1C-412B-A96C-877E718C664F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

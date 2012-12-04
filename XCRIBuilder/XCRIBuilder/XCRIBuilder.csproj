@@ -71,12 +71,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\XCRISource\XCRI\XCRI.csproj">
-      <Project>{1BA7A833-56BC-4900-8712-B12D530ECD99}</Project>
-      <Name>XCRI</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
@@ -102,6 +96,12 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\3rd Party\XCRISource\XCRI\XCRI.csproj">
+      <Project>{1ba7a833-56bc-4900-8712-b12d530ecd99}</Project>
+      <Name>XCRI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
