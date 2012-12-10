@@ -4,7 +4,8 @@ using System.Data;
 using System.Data.OracleClient;
 using XCRI.Vocabularies.XCRICAP11.Terms;
 using AttendancePattern = XCRI.AttendancePattern;
-using Description = XCRI.Vocabularies.XCRICAP11.Terms.Description;
+//using Description = XCRI.Vocabularies.XCRICAP11.Terms.Description;
+using Description = XCRI.Description;
 using System.Configuration;
 using System.Net;
 /*
@@ -108,7 +109,7 @@ namespace XCRIBuilder
                                             .ToString()
                 });
 
-            qualification.Descriptions.Add(new Description()
+            qualification.Descriptions.Add(new XCRI.Description()
                 {
                     Value =
                         CheckField(drQualification["description"].ToString(), "string", "qualificationDescription")
@@ -216,8 +217,8 @@ namespace XCRIBuilder
                 });
 
             course.Descriptions.Add(new Description()
-                {
-                    XsiTypeValue = DescriptionTypes.careerOutcome,
+                { ContentType = XCRI.Interfaces.DescriptionContentTypes.Text,
+                   XsiTypeValue = "xcri12terms:careerOutcome",
                     Value =
                         CheckField(drMasterCourse["careerOutcome"].ToString(), "string", "courseCareerOutcome")
                                         .ToString()
@@ -235,16 +236,16 @@ namespace XCRIBuilder
                 });
 
             course.Descriptions.Add(new Description()
-                {
-                    XsiTypeValue = DescriptionTypes.indicativeResource,
+                {ContentType = XCRI.Interfaces.DescriptionContentTypes.Text,
+                     XsiTypeValue = "xcri12terms:indicativeResource",
                     Value =
                         CheckField(drMasterCourse["indicativeResource"].ToString(), "string", "courseIndicativeResource")
                                         .ToString()
                 });
 
             course.Descriptions.Add(new Description()
-                {
-                    XsiTypeValue = DescriptionTypes.leadsTo,
+                {ContentType = XCRI.Interfaces.DescriptionContentTypes.Text,
+                     XsiTypeValue = "xcri12terms:leadsTo",
                     Value = CheckField(drMasterCourse["leadsTo"].ToString(), "string", "courseLeadsTo").ToString()
                 });
 
@@ -262,8 +263,8 @@ namespace XCRIBuilder
                 });
 
             course.Descriptions.Add(new Description()
-                {
-                    XsiTypeValue = DescriptionTypes.policy,
+                {ContentType = XCRI.Interfaces.DescriptionContentTypes.Text,
+                     XsiTypeValue = "xcri12terms:policy",
                     Value = CheckField(drMasterCourse["policy"].ToString(), "string", "coursePolicy").ToString()
                 });
 
@@ -274,8 +275,8 @@ namespace XCRIBuilder
                 });
 
             course.Descriptions.Add(new Description()
-                {
-                    XsiTypeValue = DescriptionTypes.structure,
+                {ContentType = XCRI.Interfaces.DescriptionContentTypes.Text,
+                     XsiTypeValue = "xcri12terms:structure",
                     Value = CheckField(drMasterCourse["structure"].ToString(), "string", "courseStructure").ToString()
                 });
 
@@ -285,8 +286,8 @@ namespace XCRIBuilder
                 });
 
             course.Descriptions.Add(new Description()
-                {
-                    XsiTypeValue = DescriptionTypes.support,
+                {ContentType = XCRI.Interfaces.DescriptionContentTypes.Text,
+                     XsiTypeValue = "xcri12terms:support",
                     Value = CheckField(drMasterCourse["support"].ToString(), "string", "courseSupport").ToString()
                 });
 
@@ -297,7 +298,8 @@ namespace XCRIBuilder
 
             course.Descriptions.Add(new Description()
                 {
-                    XsiTypeValue = DescriptionTypes.topic,
+                    ContentType = XCRI.Interfaces.DescriptionContentTypes.Text,
+                     XsiTypeValue = "xcri12terms:topic",
                     Value = CheckField(drMasterCourse["topic"].ToString(), "string", "courseTopic").ToString()
                 });
 
@@ -374,7 +376,8 @@ namespace XCRIBuilder
 
             presentation.Descriptions.Add(new Description()
                 {
-                    XsiTypeValue = DescriptionTypes.events,
+                   ContentType = XCRI.Interfaces.DescriptionContentTypes.Text,
+                     XsiTypeValue = "xcri12terms:events",
                     Value =
                         (CheckField(drCourseOffering["events"].ToString(), "string", "presentationEvents").ToString())
                 }
@@ -422,7 +425,8 @@ namespace XCRIBuilder
 
             presentation.Descriptions.Add(new Description()
                 {
-                    XsiTypeValue = DescriptionTypes.providedResource,
+                    ContentType = XCRI.Interfaces.DescriptionContentTypes.Text,
+                     XsiTypeValue = "xcri12terms:providedResource",
                     Value =
                         CheckField(drCourseOffering["providedResource"].ToString(), "string",
                                    "presentationProvidedResource").ToString()
@@ -431,15 +435,17 @@ namespace XCRIBuilder
 
             presentation.Descriptions.Add(new Description()
                 {
-                    XsiTypeValue = DescriptionTypes.requriedResource,
-                    Value = CheckField(drCourseOffering["requiredResource"].ToString(), "String",
+                    ContentType = XCRI.Interfaces.DescriptionContentTypes.Text,
+                     XsiTypeValue = "xcri12terms:requiredResource",
+                    Value = CheckField(drCourseOffering["requiredResource"].ToString(), "string",
                                        "presentationRequiredResource").ToString()
                 }
                 );
 
             presentation.Descriptions.Add(new Description()
                 {
-                    XsiTypeValue = DescriptionTypes.studyHours,
+                    ContentType = XCRI.Interfaces.DescriptionContentTypes.Text,
+                     XsiTypeValue = "xcri12terms:studyHours",
                     Value =
                         CheckField(drCourseOffering["studyHours"].ToString(), "string", "presentationStudyHours")
                                               .ToString()

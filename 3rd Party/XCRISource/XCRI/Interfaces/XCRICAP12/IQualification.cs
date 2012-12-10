@@ -16,9 +16,10 @@ namespace XCRI.Interfaces.XCRICAP12
         //IList<Interfaces.IHasPart> HasParts { get; }
         //IList<Interfaces.IIsPartOf> IsPartOf { get; }
         Interfaces.IQualificationType Type { get; set; }
+        Uri Url { get; set; }
         IList<Interfaces.IQualificationAwardedBy> AwardedBy { get; }
         IList<Interfaces.IQualificationAccreditedBy> AccreditedBy { get; }
-        Uri Url { get; set; }
+       
 
     }
 }
